@@ -1,0 +1,31 @@
+# Trained model files (large, not tracked)
+saved_model/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Environment variables
+.env
