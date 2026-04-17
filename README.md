@@ -1,4 +1,4 @@
-# MisinfoNet
+# Early Misinformation Detector
 
 A simple fake news detector built using Python. Give it any text claim and it will tell you if it's real or fake with a confidence score.
 
@@ -29,7 +29,7 @@ python predict.py --text "your claim here"
 - RVNN --> Syntactic structure features.
 - MLP classifier --> Final fake/real decision.
 
-## Team
+## Team Members
 
 - Parth singhal
 - Ghanisht kaushal
