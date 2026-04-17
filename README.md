@@ -36,5 +36,3 @@ python predict.py --text "your claim here"
 - Rahul
 - Amarveer singh
 - Angad singh
-  
->>>>>>> 07611f90f9f0093a838c2d3b91640850c4f275fc
