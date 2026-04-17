@@ -1,38 +1,122 @@
 # Early Misinformation Detection
 
-A simple fake news detector built using Python. Give it any text claim and it will tell you if it's real or fake with a confidence score.
+A simple fake news detection system built using Python. You can give it any text or claim, and it will predict whether it is **real or fake**, along with a confidence score.
 
-This was our college project at IIT Ropar. We built everything from scratch without using PyTorch or TensorFlow.
+This project was developed as part of our college work at IIT Ropar. The main goal was to understand how different techniques can be combined to detect misinformation, instead of relying on just one model.
+
+One important part of this project is that everything is implemented from scratch using NumPy, without using deep learning frameworks like PyTorch or TensorFlow.
+
+---
+
+## How it works
+
+The model does not depend on a single method. Instead, it combines multiple ideas to analyze the input text from different angles.
+
+First, the input is checked against a small knowledge base using a retrieval-based approach (RAG). If the system finds strong similarity with known data, it makes a quick prediction.
+
+If the match is not strong enough, the text is processed further using different feature extractors:
+- Pattern-based features (similar to CNN)
+- Sequence-based features (similar to RNN)
+- Structure-based features (similar to RVNN)
+
+All these features are combined and passed into a final classifier, which gives the prediction.
+
+This way, the system tries to be both efficient and reasonably accurate.
+
+---
 
 ## How to run
 
-```bash
+Clone the repository and install dependencies:
+
+```
 pip install -r requirements.txt
-python train.py
-python predict.py --text "your claim here"
 ```
 
-## What we used
+Train the model:
 
-- Python
-- NumPy
-- scikit-learn
+```
+python src/train.py
+```
 
+Run prediction:
 
-## Model/Techniques used
+```
+python src/predict.py --text "your claim here"
+```
 
-- TF-IDF --> To convert text into numbers.
-- Cosine similarity --> To Match claims against knowledge base.
-- RAG --> knowledge base lookup.
-- CNN --> Pattern detection.
-- RNN --> Sequence features.
-- RVNN --> Syntactic structure features.
-- MLP classifier --> Final fake/real decision.
+Evaluate the model:
+
+```
+python src/evaluate.py
+```
+
+---
+
+## Techniques used
+
+- TF-IDF  
+  Used to convert text into numerical form.
+
+- Cosine Similarity  
+  Helps in matching input text with the knowledge base.
+
+- RAG (Retrieval-Augmented Generation)  
+  Used for quick lookup-based predictions.
+
+- CNN-style features  
+  Capture local patterns like sensational words.
+
+- RNN-style features  
+  Capture sequence and flow of text.
+
+- RVNN-style features  
+  Capture structure and syntactic signals.
+
+- MLP Classifier  
+  Final layer that decides whether the text is real or fake.
+
+---
+
+## Project structure
+
+```
+src/
+  nn.py
+  model_v3_lazy.py
+  feature_extractors.py
+  rag_module.py
+  knowledge_base.py
+  dataset.py
+  checkpoint.py
+  train.py
+  predict.py
+  evaluate.py
+```
+
+---
+
+## Output
+
+The model returns:
+- Prediction (Real / Fake)
+- Probability score
+- Basic routing info (whether it used retrieval or full model)
+
+---
+
+## Notes
+
+- This project is mainly for learning and experimentation.
+- The knowledge base is limited, so results may vary on unseen topics.
+- The architecture can be improved further with better data and tuning.
+
+---
 
 ## Team Members
 
-- Parth singhal
-- Ghanisht kaushal
-- Rahul
-- Amarveer singh
-- Angad singh
+- Parth Singhal  
+- Ghanisht Kaushal  
+- Rahul  
+- Amarveer Singh  
+- Angad Singh  
