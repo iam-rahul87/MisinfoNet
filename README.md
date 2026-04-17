@@ -114,7 +114,7 @@ main/
    .gitignore
 ---
    requirements.txt
-  
+---
 
     
 ---
@@ -122,17 +122,22 @@ main/
 ## Output
 
 The model returns:-
--> Prediction (Real / Fake)
--> Probability score
--> Basic routing info (whether it used retrieval or full model)
-
+--> Prediction (Real / Fake)
+---
+--> Probability score
+---
+--> Basic routing info (whether it used retrieval or full model)
+---
 ---
 
 ## Notes
 
--> This project is mainly for learning and experimentation.
--> The knowledge base is limited, so results may vary on unseen topics.
--. The architecture can be improved further with better data and tuning.
+--> This project is mainly for learning and experimentation.
+---
+--> The knowledge base is limited, so results may vary on unseen topics.
+---
+--> The architecture can be improved further with better data and tuning.
+---
 
 ---
 
