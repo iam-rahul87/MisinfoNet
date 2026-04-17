@@ -56,24 +56,31 @@ python src/evaluate.py
 ## Techniques used
 
 - TF-IDF :
+- 
   --> Used to convert text into numerical form.
 
-- Cosine Similarity : 
+- Cosine Similarity :
+- 
   --> Helps in matching input text with the knowledge base.
 
-- RAG (Retrieval-Augmented Generation) :  
+- RAG (Retrieval-Augmented Generation) :
+-   
   --> Used for quick lookup-based predictions.
 
 - CNN :
+- 
   --> Capture local patterns like sensational words.
 
 - RNN :
+- 
   --> Capture sequence and flow of text.
 
-- RVNN :  
+- RVNN :
+- 
   --> Capture structure and syntactic signals.
 
 - MLP Classifier :
+- 
   --> Final layer that decides whether the text is real or fake.
 
 ---
@@ -81,18 +88,31 @@ python src/evaluate.py
 ## Project structure
 
 main/
+---
     src/
+---
           nn.py
+---
           model_v3_lazy.py
+---
           feature_extractors.py
+---
           rag_module.py
+---
           knowledge_base.py
+---
           dataset.py
+---
           checkpoint.py
+---
    train.py
+---
    predict.py
+---
    evaluate.py
+---
    .gitignore
+---
    requirements.txt
   
 
